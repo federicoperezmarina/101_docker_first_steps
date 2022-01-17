@@ -13,6 +13,7 @@ This is an small workshop to start using docker (first steps)
 * [Docker help](#docker-help)
 * [Docker containers](#docker-containers)
 * [Docker rm](#docker-rm)
+* [Docker run bash](#docker-run-bash)
 * [Docker build](#docker-build)
 
 ## Docker Cheat Sheet
@@ -317,6 +318,13 @@ docker ps
 docker stop <container_id>
 docker ps
 docker rm <container_id>
+```
+
+## Docker run bash
+We are going to run the image to go inside it and use some command inside the container.
+
+```sh
+docker run -it ubuntu /bin/bash
 ```
 
 ## Docker build
