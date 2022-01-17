@@ -15,8 +15,9 @@ This is an small workshop to start using docker (first steps)
 * [Docker rm](#docker-rm)
 * [Docker run bash](#docker-run-bash)
 * [Docker build](#docker-build)
-* [Docker compose](#docker-compose)
 * [Docker registry & repository](#docker-registry--repository)
+* [Dockerfile](#dockerfile)
+* [Docker compose](#docker-compose)
 
 ## Docker Cheat Sheet
 We have an small pdf [docker-cheat-sheet.pdf](https://github.com/federicoperezmarina/101_docker_first_steps/blob/main/docker-cheat-sheet.pdf) which contains some useful commands to start using docker
@@ -341,6 +342,41 @@ After that we want tu run the image, we will use:
 docker run -dp 3000:3000 getting-started-image
 ```
 
-## Docker compose
-
 ## Docker registry & repository
+A repository is a *hosted* collection of tagged images that together create the file system for a container.
+
+A registry is a *host* -- a server that stores repositories and provides an HTTP API for [managing the uploading and downloading of repositories](https://docs.docker.com/engine/tutorials/dockerrepos/).
+
+Docker.com hosts its own [index](https://hub.docker.com/) to a central registry which contains a large number of repositories.  Having said that, the central docker registry [does not do a good job of verifying images](https://titanous.com/posts/docker-insecurity) and should be avoided if you're worried about security.
+
+* [`docker login`](https://docs.docker.com/engine/reference/commandline/login) to login to a registry.
+* [`docker logout`](https://docs.docker.com/engine/reference/commandline/logout) to logout from a registry.
+* [`docker search`](https://docs.docker.com/engine/reference/commandline/search) searches registry for image.
+* [`docker pull`](https://docs.docker.com/engine/reference/commandline/pull) pulls an image from registry to local machine.
+* [`docker push`](https://docs.docker.com/engine/reference/commandline/push) pushes an image to the registry from local machine.
+
+## Dockerfile
+
+### Instructions
+
+* [.dockerignore](https://docs.docker.com/engine/reference/builder/#dockerignore-file)
+* [FROM](https://docs.docker.com/engine/reference/builder/#from) Sets the Base Image for subsequent instructions.
+* [MAINTAINER (deprecated - use LABEL instead)](https://docs.docker.com/engine/reference/builder/#maintainer-deprecated) Set the Author field of the generated images.
+* [RUN](https://docs.docker.com/engine/reference/builder/#run) execute any commands in a new layer on top of the current image and commit the results.
+* [CMD](https://docs.docker.com/engine/reference/builder/#cmd) provide defaults for an executing container.
+* [EXPOSE](https://docs.docker.com/engine/reference/builder/#expose) informs Docker that the container listens on the specified network ports at runtime.  NOTE: does not actually make ports accessible.
+* [ENV](https://docs.docker.com/engine/reference/builder/#env) sets environment variable.
+* [ADD](https://docs.docker.com/engine/reference/builder/#add) copies new files, directories or remote file to container.  Invalidates caches. Avoid `ADD` and use `COPY` instead.
+* [COPY](https://docs.docker.com/engine/reference/builder/#copy) copies new files or directories to container.  By default this copies as root regardless of the USER/WORKDIR settings.  Use `--chown=<user>:<group>` to give ownership to another user/group.  (Same for `ADD`.)
+* [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#entrypoint) configures a container that will run as an executable.
+* [VOLUME](https://docs.docker.com/engine/reference/builder/#volume) creates a mount point for externally mounted volumes or other containers.
+* [USER](https://docs.docker.com/engine/reference/builder/#user) sets the user name for following RUN / CMD / ENTRYPOINT commands.
+* [WORKDIR](https://docs.docker.com/engine/reference/builder/#workdir) sets the working directory.
+* [ARG](https://docs.docker.com/engine/reference/builder/#arg) defines a build-time variable.
+* [ONBUILD](https://docs.docker.com/engine/reference/builder/#onbuild) adds a trigger instruction when the image is used as the base for another build.
+* [STOPSIGNAL](https://docs.docker.com/engine/reference/builder/#stopsignal) sets the system call signal that will be sent to the container to exit.
+* [LABEL](https://docs.docker.com/config/labels-custom-metadata/) apply key/value metadata to your images, containers, or daemons.
+* [SHELL](https://docs.docker.com/engine/reference/builder/#shell) override default shell is used by docker to run commands.
+* [HEALTHCHECK](https://docs.docker.com/engine/reference/builder/#healthcheck) tells docker how to test a container to check that it is still working.
+
+## Docker compose
