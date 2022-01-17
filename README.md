@@ -7,6 +7,7 @@ This is an small workshop to start using docker (first steps)
 * [Docker Version](#docker_version)
 * [Docker First Run](#docker_first_run)
 * [Docker Getting Started](#docker_getting_started)
+* [Docker Search](#docker_search)
 
 ## Docker Cheat Sheet
 We have an small pdf docker-cheat-sheet.pdf which contains some useful commands to start using docker
@@ -70,3 +71,40 @@ For more examples and ideas, visit:
  ```
  http://localhost/tutorial/
  ``` 
+
+ ## Docker Search
+ Docker search is a command to find an image in the docker image repository
+
+```sh
+docker search nginx
+```
+
+Typing the command you will recibe the name of images with the search, a little description, the starts of the image and official flag
+```console
+NAME                              DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+nginx                             Official build of Nginx.                        16141     [OK]       
+jwilder/nginx-proxy               Automated Nginx reverse proxy for docker con…   2109                 [OK]
+richarvey/nginx-php-fpm           Container running Nginx + PHP-FPM capable of…   820                  [OK]
+jc21/nginx-proxy-manager          Docker container for managing Nginx proxy ho…   312                  
+linuxserver/nginx                 An Nginx container, brought to you by LinuxS…   160                  
+tiangolo/nginx-rtmp               Docker image with Nginx using the nginx-rtmp…   151                  [OK]
+jlesage/nginx-proxy-manager       Docker container for Nginx Proxy Manager        150                  [OK]
+alfg/nginx-rtmp                   NGINX, nginx-rtmp-module and FFmpeg from sou…   114                  [OK]
+nginxdemos/hello                  NGINX webserver that serves a simple page co…   82                   [OK]
+privatebin/nginx-fpm-alpine       PrivateBin running on an Nginx, php-fpm & Al…   61                   [OK]
+nginx/nginx-ingress               NGINX and  NGINX Plus Ingress Controllers fo…   59                   
+nginxinc/nginx-unprivileged       Unprivileged NGINX Dockerfiles                  57                   
+nginxproxy/nginx-proxy            Automated Nginx reverse proxy for docker con…   34                   
+staticfloat/nginx-certbot         Opinionated setup for automatic TLS certs lo…   25                   [OK]
+nginx/nginx-prometheus-exporter   NGINX Prometheus Exporter for NGINX and NGIN…   23                   
+schmunk42/nginx-redirect          A very simple container to redirect HTTP tra…   19                   [OK]
+centos/nginx-112-centos7          Platform for running nginx 1.12 or building …   16                   
+centos/nginx-18-centos7           Platform for running nginx 1.8 or building n…   13                   
+flashspys/nginx-static            Super Lightweight Nginx Image                   12                   [OK]
+bitwarden/nginx                   The Bitwarden nginx web server acting as a r…   12                   
+mailu/nginx                       Mailu nginx frontend                            10                   [OK]
+webdevops/nginx                   Nginx container                                 9                    [OK]
+sophos/nginx-vts-exporter         Simple server that scrapes Nginx vts stats a…   7                    [OK]
+ansibleplaybookbundle/nginx-apb   An APB to deploy NGINX                          3                    [OK]
+wodby/nginx                       Generic nginx                                   1                    [OK]
+```
