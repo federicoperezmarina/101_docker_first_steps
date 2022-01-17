@@ -8,6 +8,7 @@ This is an small workshop to start using docker (first steps)
 * [Docker First Run](#docker_first_run)
 * [Docker Getting Started](#docker_getting_started)
 * [Docker Search](#docker_search)
+* [Docker Images](#docker_images)
 
 ## Docker Cheat Sheet
 We have an small pdf docker-cheat-sheet.pdf which contains some useful commands to start using docker
@@ -107,4 +108,42 @@ webdevops/nginx                   Nginx container                               
 sophos/nginx-vts-exporter         Simple server that scrapes Nginx vts stats a…   7                    [OK]
 ansibleplaybookbundle/nginx-apb   An APB to deploy NGINX                          3                    [OK]
 wodby/nginx                       Generic nginx                                   1                    [OK]
+```
+
+Now we can try it with some searches
+```sh
+docker search ubuntu
+docker search alpine
+docker search java
+docker search angular
+docker search mongodb
+docker search elastic
+docker search grafana
+```
+
+## Docker Images
+The command "docker images" obtains the list of images that we have in our machine. Let's try it!
+
+```sh
+docker images
+```
+
+We will recieve an ouput like this:
+```console
+REPOSITORY                                      TAG            IMAGE ID       CREATED         SIZE
+nmap                                            latest         64da15eba121   2 weeks ago     531MB
+nginx                                           latest         f6987c8d6ed5   3 weeks ago     141MB
+checkmk/check-mk-raw                            2.0.0-latest   953b035c79be   5 weeks ago     1.03GB
+grafana/grafana                                 latest         3b1fc05e7c9a   5 weeks ago     275MB
+influxdb                                        latest         07a3e66c579f   6 weeks ago     346MB
+docker/getting-started                          latest         26d80cd96d69   6 weeks ago     28.5MB
+grafana/loki                                    latest         e3e722f23de3   2 months ago    62.5MB
+grafana/promtail                                latest         592b97aee96d   2 months ago    179MB
+prom/prometheus                                 latest         c10e9cbf22cd   2 months ago    194MB
+ubuntu                                          latest         ba6acccedd29   3 months ago    72.8MB
+hello-world                                     latest         feb5d9fea6a5   3 months ago    13.3kB
+grafana/grafana                                 7.3.7          13afb861111c   12 months ago   187MB
+checkmk/check-mk-raw                            latest         3485c9125bc8   17 months ago   848MB
+docker.elastic.co/logstash/logstash             7.7.0          30dcca1db5e9   20 months ago   740MB
+docker.elastic.co/elasticsearch/elasticsearch   7.7.0          7ec4f35ab452   20 months ago   757MB
 ```
