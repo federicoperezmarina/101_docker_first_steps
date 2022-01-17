@@ -15,6 +15,7 @@ This is an small workshop to start using docker (first steps)
 * [Docker rm](#docker-rm)
 * [Docker run bash](#docker-run-bash)
 * [Docker build](#docker-build)
+* [Docker compose](#docker-compose)
 
 ## Docker Cheat Sheet
 We have an small pdf [docker-cheat-sheet.pdf](https://github.com/federicoperezmarina/101_docker_first_steps/blob/main/docker-cheat-sheet.pdf) which contains some useful commands to start using docker
@@ -338,3 +339,5 @@ After that we want tu run the image, we will use:
 ```sh
 docker run -dp 3000:3000 getting-started-image
 ```
+
+## Docker compose
