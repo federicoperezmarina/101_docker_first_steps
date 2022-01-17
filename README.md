@@ -13,7 +13,9 @@ This is an small workshop to start using docker (first steps)
 * [Docker help](#docker-help)
 
 ## Docker Cheat Sheet
-We have an small pdf docker-cheat-sheet.pdf (https://github.com/federicoperezmarina/101_docker_first_steps/blob/main/docker-cheat-sheet.pdf) which contains some useful commands to start using docker
+We have an small pdf docker-cheat-sheet.pdf which contains some useful commands to start using docker
+
+https://github.com/federicoperezmarina/101_docker_first_steps/blob/main/docker-cheat-sheet.pdf
 
 ## Docker Version
 Run "docker --version" permits us to obtain the version of docker that we have installed. 
