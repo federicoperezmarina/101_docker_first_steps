@@ -6,6 +6,7 @@ This is an small workshop to start using docker (first steps)
 * [Docker Cheat Sheet](#docker_cheat_sheet)
 * [Docker Version](#docker_version)
 * [Docker First Run](#docker_first_run)
+* [Docker Getting Started](#docker_getting_started)
 
 ## Docker Cheat Sheet
 We have an small pdf docker-cheat-sheet.pdf which contains some useful commands to start using docker
@@ -57,3 +58,15 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
  ```
+
+ ## Docker Getting Started
+ Now we are going to view the official getting started tutorial of docker
+
+ ```sh
+ docker run -d -p 80:80 docker/getting-started
+ ```
+
+ At this time we are able to go to the url "http://localhost/tutorial/" and view the tutorial in our browser
+ ```
+ http://localhost/tutorial/
+ ``` 
