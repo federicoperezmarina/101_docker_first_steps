@@ -11,7 +11,7 @@ We have an small pdf docker-cheat-sheet.pdf which contains some useful commands 
 
 ## Docker Version
 Run "docker --version" permits us to obtain the version of docker that we have installed. 
-```sh
+```consonle
 # Display the version of docker installed:
 docker --version
 
