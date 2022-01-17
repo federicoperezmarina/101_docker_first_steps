@@ -335,11 +335,7 @@ Now we are going to use the command "docker build". We need to use a Dockerfile.
 
 ```sh
 docker build -t getting-started-image .
-```
-
-After that we want tu run the image, we will use:
-```sh
-docker run -dp 3000:3000 getting-started-image
+docker images
 ```
 
 ## Docker registry & repository
