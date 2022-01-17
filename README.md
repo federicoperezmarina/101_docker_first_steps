@@ -3,12 +3,12 @@ This is an small workshop to start using docker (first steps)
 
 ## Table of Contents
 
-* [Docker Cheat Sheet](#docker_cheat_sheet)
-* [Docker Version](#docker_version)
-* [Docker First Run](#docker_first_run)
-* [Docker Getting Started](#docker_getting_started)
-* [Docker Search](#docker_search)
-* [Docker Images](#docker_images)
+* [Docker Cheat Sheet](#docker-cheat-sheet)
+* [Docker Version](#docker-version)
+* [Docker First Run](#docker-first-run)
+* [Docker Getting Started](#docker-getting-started)
+* [Docker Search](#docker-search)
+* [Docker Images](#docker-images)
 
 ## Docker Cheat Sheet
 We have an small pdf docker-cheat-sheet.pdf which contains some useful commands to start using docker
