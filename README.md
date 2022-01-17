@@ -9,6 +9,7 @@ This is an small workshop to start using docker (first steps)
 * [Docker Getting Started](#docker-getting-started)
 * [Docker Search](#docker-search)
 * [Docker Images](#docker-images)
+* [Docker ps](#docker-ps)
 
 ## Docker Cheat Sheet
 We have an small pdf docker-cheat-sheet.pdf which contains some useful commands to start using docker
@@ -146,4 +147,18 @@ grafana/grafana                                 7.3.7          13afb861111c   12
 checkmk/check-mk-raw                            latest         3485c9125bc8   17 months ago   848MB
 docker.elastic.co/logstash/logstash             7.7.0          30dcca1db5e9   20 months ago   740MB
 docker.elastic.co/elasticsearch/elasticsearch   7.7.0          7ec4f35ab452   20 months ago   757MB
+```
+
+## Docker ps
+The command "docker ps" is useful in order to know which images are up in our system. First of all we will have to start some image with docker.
+
+```sh
+docker run nginx
+docker ps
+```
+
+We will recieve an ouput with the container_id, image, command, time of the run, status, ports and names
+```console
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
+d01c9ef54f35   nginx     "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes   80/tcp    nifty_blackburn
 ```
