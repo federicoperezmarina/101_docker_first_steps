@@ -13,6 +13,7 @@ This is an small workshop to start using docker (first steps)
 * [Docker help](#docker-help)
 * [Docker containers](#docker-containers)
 * [Docker rm](#docker-rm)
+* [Docker build](#docker-build)
 
 ## Docker Cheat Sheet
 We have an small pdf [docker-cheat-sheet.pdf](https://github.com/federicoperezmarina/101_docker_first_steps/blob/main/docker-cheat-sheet.pdf) which contains some useful commands to start using docker
@@ -316,4 +317,16 @@ docker ps
 docker stop <container_id>
 docker ps
 docker rm <container_id>
+```
+
+## Docker build
+Now we are going to use the command "docker build". We need to use a Dockerfile. A dockerfile is simply a text-based script of instructions that is used to create a container image. Lets try it!
+
+```sh
+docker build -t getting-started-image .
+```
+
+After that we want tu run the image, we will use:
+```sh
+docker run -dp 3000:3000 getting-started-image
 ```
