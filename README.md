@@ -12,6 +12,7 @@ This is an small workshop to start using docker (first steps)
 * [Docker ps](#docker-ps)
 * [Docker help](#docker-help)
 * [Docker containers](#docker-containers)
+* [Docker rm](#docker-rm)
 
 ## Docker Cheat Sheet
 We have an small pdf [docker-cheat-sheet.pdf](https://github.com/federicoperezmarina/101_docker_first_steps/blob/main/docker-cheat-sheet.pdf) which contains some useful commands to start using docker
@@ -261,7 +262,7 @@ To get more help with docker, check out our guides at https://docs.docker.com/go
 ```
 
 ## Docker Containers
-Containers are to Virtual Machines as threads are to processes. Or you can think of them as chroots on steroids.
+Containers are to Virtual Machines as threads are to processes.
 
 ### Lifecycle
 
@@ -301,3 +302,18 @@ Containers are to Virtual Machines as threads are to processes. Or you can think
 ### Executing Commands
 
 * [`docker exec`](https://docs.docker.com/engine/reference/commandline/exec) to execute a command in container.
+
+## Docker rm
+Now we are going to remove a container. First of all we are going tu run a container, after we will stop & start & stop. Finally we will remove the container.
+
+```sh
+docker run nginx &
+docker ps
+docker stop <container_id>
+docker ps
+docker start <container_id>
+docker ps
+docker stop <container_id>
+docker ps
+docker rm <container_id>
+```
