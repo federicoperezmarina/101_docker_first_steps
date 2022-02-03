@@ -27,3 +27,9 @@ docker run -it alpine-python
 #output
 My first Alpine docker image with python
 ```
+
+Third we can get into the image and see if the library requests is installed
+```sh
+docker run -it alpine-python /bin/ash
+pip3 list
+```
