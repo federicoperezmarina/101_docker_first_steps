@@ -1,0 +1,1 @@
+console.log("My first Ubuntu docker image with node.js")
