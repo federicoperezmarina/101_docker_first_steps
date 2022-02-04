@@ -377,5 +377,6 @@ Docker.com hosts its own [index](https://hub.docker.com/) to a central registry 
 
 ### Dockerfile examples
 * [01_docker_alpine_python](/01_docker_alpine_python)
+* [02_docker_alpine_node_js](/02_docker_alpine_node_js)
 
 ## Docker compose
