@@ -1,0 +1,1 @@
+console.log("My first Alpine docker image with node.js")
