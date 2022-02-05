@@ -383,3 +383,4 @@ Docker.com hosts its own [index](https://hub.docker.com/) to a central registry 
 * [05_docker_alpine_nginx](/05_docker_alpine_nginx)
 
 ## Docker compose
+* [01_docker_compose_elk](/01_docker_compose_elk)
