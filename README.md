@@ -380,5 +380,6 @@ Docker.com hosts its own [index](https://hub.docker.com/) to a central registry 
 * [02_docker_alpine_node_js](/02_docker_alpine_node_js)
 * [03_docker_ubuntu_python](/03_docker_ubuntu_python)
 * [04_docker_ubuntu_node_js](/04_docker_ubuntu_node_js)
+* [05_docker_alpine_nginx](/05_docker_alpine_nginx)
 
 ## Docker compose
